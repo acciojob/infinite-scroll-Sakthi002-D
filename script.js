@@ -1,21 +1,16 @@
-const list = document.getElementById("infi-list");
-let count = 1;
-
-function addItem() {
-    const li = document.createElement("li");
-    li.textContent = `Item ${count++}`;
-    list.appendChild(li);
+const list  = document.getElementById('infi-list');
+let itemCounter = 10;
+function addMoreItem(count){
+	for(let i=0;i<count;i++){
+		itemCounter++;
+		const newItem = document.createElement('li');
+		newItem.innerText = `Item ${itemCounter}`;
+		list.appendChild(newItem);
+	}
 }
 
-for (let i = 0; i < 10; i++) {
-    addItem();
-}
-
-window.addEventListener("scroll", () => {
-    if (
-		list.scrollTop + list.clientHeight >= list.scrollHeight
-	   ) {
-        addItem();
-        addItem();
-    }
-});
+list.addEventListener('scroll',()=>{
+	if(list.scrollTop + list.clientHeight >= list.scrollHeight - 1){
+		addMoreItem(2);
+	}
+})
