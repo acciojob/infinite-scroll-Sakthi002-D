@@ -7,13 +7,13 @@ function addItem() {
     list.appendChild(li);
 }
 
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < 10; i++) {
     addItem();
 }
 
 window.addEventListener("scroll", () => {
     if (
-		element.scrollTop + element.clientHeight >= element.scrollHeight
+		list.scrollTop + list.clientHeight >= list.scrollHeight
 	   ) {
         addItem();
         addItem();
