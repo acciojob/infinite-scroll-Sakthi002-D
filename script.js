@@ -1,4 +1,4 @@
-const list = document.getElementById("list");
+const list = document.getElementById("infi-list");
 let count = 1;
 
 function addItem() {
@@ -12,9 +12,10 @@ for (let i = 0; i < 2; i++) {
 }
 
 window.addEventListener("scroll", () => {
-    if (window.innerHeight + window.scrollY >=
-        document.body.offsetHeight)
-	{
+    if (
+		window.innerHeight + window.scrollY >=
+        document.body.offsetHeight
+	   ) {
         addItem();
         addItem();
     }
