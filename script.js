@@ -8,11 +8,11 @@ function addItem() {
 	list.appendChild(li);
 }
 
-fo(let i = 0; i < 10; i++){
+for(let i = 0; i < 10; i++){
 	addItem();
 }
 
-list.addEventListner("scroll", () =>  {
+list.addEventListener("scroll", () =>  {
 	if(
 		list.scrollTop + list.clientHeight >=
 		list.scrollHeight
