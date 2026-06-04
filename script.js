@@ -13,8 +13,7 @@ for (let i = 0; i < 2; i++) {
 
 window.addEventListener("scroll", () => {
     if (
-		window.innerHeight + window.scrollY >=
-        document.body.offsetHeight
+		element.scrollTop + element.clientHeight >= element.scrollHeight
 	   ) {
         addItem();
         addItem();
